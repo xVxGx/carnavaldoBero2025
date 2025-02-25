@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beija ou Corre? 💋🏃‍♂️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff69b4;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        #resultado {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💋 Beija ou Corre? 🏃‍♂️</h1>
+        <p>Clique no botão para descobrir quem está te chamando pro beijo!</p>
+        <button onclick="sortearFolioes()">Sortear Folião</button>
+        <p id="resultado"></p>
+        <button onclick="decisao('beija')">💋 Beijar</button>
+        <button onclick="decisao('corre')">🏃‍♂️ Correr</button>
+    </div>
+
+    <script>
+        const folioes = [
+            "O elon musk",
+            "Um desconhecido fantasiado de Pikachu",
+            "Uma senhora de 80 anos com glitter no rosto",
+            "O segurança do bloco (Boa sorte... 😂)",
+            "Alguém que já namorou seu primo de terceiro grau",
+            "No tempo dos imbu nós chupa igual um todo",
+            "O negão do whatsapp (Bom dia, bom dia... )",
+            "Uma pessoa fantasiada de Globo Rural"
+        ];
+
+        function sortearFolioes() {
+            let sorteado = folioes[Math.floor(Math.random() * folioes.length)];
+            document.getElementById("resultado").innerText = "Você encontrou: " + sorteado;
+        }
+
+        function decisao(acao) {
+            if (acao === 'beija') {
+                alert("Parabéns, agora você tem um crush de Carnaval! 💋");
+            } else {
+                alert("Corre, antes que seja tarde! 🏃‍♂️💨");
+            }
+        }
+    </script>
+</body>
+</html>

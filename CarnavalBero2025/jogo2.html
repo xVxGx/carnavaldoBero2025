@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual Seu Bloco? 🎶</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffdd57;
+            color: #3a3a3a;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff6347;
+        }
+        button {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e5533e;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #555;
+        }
+        #bloco {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #ff6347;
+        }
+        .bloco {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed #ff6347;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎶 Qual Seu Bloco? 🎭</h1>
+        <p>Clique no botão para descobrir em qual bloco você deveria estar!</p>
+        
+        <button onclick="gerarBloco()">Sortear Bloco</button>
+        <p id="bloco" class="bloco"></p>
+    </div>
+
+    <script>
+        const blocos = [
+            "Bloco do Ressaca e Fome",
+            "Me Esquece Que Eu Tô na Pista",
+            "Se Tem Copo, Tem Festa",
+            "Glitter Até Dezembro",
+            "Tô Solteiro, Mas Não Sozinho",
+            "Se Perdeu? Só Seguir o Barulho",
+            "Chifre É Coisa Que Balança, Mas Não Cai",
+            "É Hoje que Eu Engravido o Bloco"
+        ];
+
+        function gerarBloco() {
+            let blocoSorteado = blocos[Math.floor(Math.random() * blocos.length)];
+            document.getElementById("bloco").innerText = "Seu bloco é: " + blocoSorteado;
+        }
+    </script>
+</body>
+</html>
